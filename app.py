@@ -3,10 +3,10 @@ import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Load the trained classifier and TF-IDF vectorizer
-with open(r"C:\Users\SVI\Desktop\email-classifier\model.pkl", "rb") as model_file:
+with open("model.pkl", "rb") as model_file:
     classifier = pickle.load(model_file)
 
-with open(r"C:\Users\SVI\Desktop\email-classifier\vector.pkl", "rb") as vectorizer_file:
+with open("vector.pkl", "rb") as vectorizer_file:
     tfidf_vectorizer = pickle.load(vectorizer_file)
 
 def predict_spam(text):
